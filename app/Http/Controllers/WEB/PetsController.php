@@ -53,7 +53,7 @@ class PetsController extends Controller
      */
     public static function updateOldSpecieValues()
     {
-        $pets = Pet::all();
+        $pets = Pet::select("*")->get();
         
         foreach ($pets as $pet) {
             switch ($pet->specie) {
@@ -95,7 +95,7 @@ class PetsController extends Controller
      */
     public static function updateOldSizeValues()
     {
-        $pets = Pet::whereIn('size', ['large', 'm', 'medium', 'small', 'xl', 'xs'])->get();
+        $pets = Pet::select("*")->get();
 
         foreach ($pets as $pet) {
             switch ($pet->size) {
