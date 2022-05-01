@@ -15,3 +15,6 @@ Route::resource('pets', PetsController::class);
 // Route::get('/pets/adicionar', [PetsController::class, 'create']);
 
 // Route::get('/pets/{id}', [PetsController::class, 'show']);
+
+Route::get('/pets/updateOldSpecieValues', PetsController::updateOldSpecieValues());
+Route::get('/pets/updateOldSpecieValues', PetsController::updateOldSizeValues());

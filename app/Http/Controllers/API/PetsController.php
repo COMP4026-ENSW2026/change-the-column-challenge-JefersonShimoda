@@ -18,7 +18,6 @@ class PetsController extends Controller
         return Pet::all();
     }
 
-
     /**
      * Store a newly created resource in storage.
      *
